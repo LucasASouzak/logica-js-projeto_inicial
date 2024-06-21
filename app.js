@@ -1,9 +1,13 @@
-let titulo = document.querySelector('h1');
-titulo.innerHTML = 'Jogo do Número Secreto';
+//implementando função para manupular texto no HTML.
 
-let paragrafo =document.querySelector('p');
-paragrafo.innerHTML = 'Escolha um número entre 1 e 10';
+function exibiTextoNaTela(tag, texto) {
+    let campo = document.querySelector(tag);
+    campo.innerHTML = texto;
+}
 
-function verificarChute(){
-   ;
+exibiTextoNaTela('h1''Jogo do Número Secreto');
+exibiTextoNaTela('p''Escolha um número entre 1 e 100');
+
+function verificarChute() {
+   console.log('Botão acionado');
 }
