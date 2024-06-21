@@ -1,6 +1,6 @@
 //implementando função para manupular texto no HTML.
 
-let numeroSecreto = 100;
+let numeroSecreto = 10;
 let segredo = criaNumeroRandom();
 
 
@@ -10,11 +10,12 @@ function exibiTextoNaTela(tag, texto) {
 }
 
 exibiTextoNaTela('h1','Jogo do Número Secreto');
-exibiTextoNaTela('p','Escolha um número entre 1 e 100');
+exibiTextoNaTela('p','Escolha um número entre 1 e 10');
 
 //Implementando numero aleatório, teste okay.
 function verificarChute() {
-   console.log(segredo);
+   let chute = document.querySelector('input').value 
+   console.log(chute == numeroSecreto);
 }
 
 function criaNumeroRandom (){
