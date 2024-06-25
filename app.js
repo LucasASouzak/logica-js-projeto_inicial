@@ -7,6 +7,7 @@ let tentativas = 1;
 function exibiTextoNaTela(tag, texto) {
     let campo = document.querySelector(tag);
     campo.innerHTML = texto;
+    responsiveVoice.speak(texto, 'Brazilian Portuguese Female', {rate:1.2});
 }
 
 function exibeSaudacao(){
@@ -43,7 +44,7 @@ function numeroRandom (){
     let numerosJaSorteados = listaDeNumerosSorteados.length;
 
     if (numerosJaSorteados == limitador){
-        listaDeNumerosSorteados = []
+        listaDeNumerosSorteados = [];
 
     }
     if (listaDeNumerosSorteados.includes(numeroEscolhido)){
