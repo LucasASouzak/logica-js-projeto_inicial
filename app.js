@@ -1,6 +1,6 @@
 //implementando função para manupular texto no HTML.
-
-let segredo = numeroRandom();
+let listaDeNumerosSorteados = [];
+let segredo = numeroRandom ();
 let tentativas = 1;
 
 function exibiTextoNaTela(tag, texto) {
@@ -38,7 +38,20 @@ function verificarChute() {
 }
 
 function numeroRandom (){
-    return parseInt(Math.random() * 10 + 1);
+    let numeroEscolhido = parseInt(Math.random() * 10 + 1);
+    let numerosJaSorteados = listaDeNumerosSorteados.length;
+
+    if (numerosJaSorteados == 10){
+        listaDeNumerosSorteados = []
+
+    }
+    if (listaDeNumerosSorteados.includes(numeroEscolhido)){
+        return numeroRandom();
+    }else{
+        listaDeNumerosSorteados.push(numeroEscolhido);
+        console.log(listaDeNumerosSorteados);
+        return numeroEscolhido;
+    }
 }
 
 function limpaTela(){
