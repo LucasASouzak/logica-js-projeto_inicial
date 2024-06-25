@@ -1,5 +1,6 @@
 //implementando função para manupular texto no HTML.
 let listaDeNumerosSorteados = [];
+let limitador = 50;
 let segredo = numeroRandom ();
 let tentativas = 1;
 
@@ -10,7 +11,7 @@ function exibiTextoNaTela(tag, texto) {
 
 function exibeSaudacao(){
     exibiTextoNaTela('h1','Jogo do Número Secreto');
-    exibiTextoNaTela('p','Escolha um número entre 1 e 10');
+    exibiTextoNaTela('p',`Escolha um número entre 1 e ${limitador} `);
 }
 
 exibeSaudacao();
@@ -38,10 +39,10 @@ function verificarChute() {
 }
 
 function numeroRandom (){
-    let numeroEscolhido = parseInt(Math.random() * 10 + 1);
+    let numeroEscolhido = parseInt(Math.random() * limitador + 1);
     let numerosJaSorteados = listaDeNumerosSorteados.length;
 
-    if (numerosJaSorteados == 10){
+    if (numerosJaSorteados == limitador){
         listaDeNumerosSorteados = []
 
     }
