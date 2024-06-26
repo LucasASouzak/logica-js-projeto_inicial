@@ -1,6 +1,6 @@
 //implementando função para manupular texto no HTML.
 let listaDeNumerosSorteados = [];
-let limitador = 50;
+let limitador = 3;
 let segredo = numeroRandom ();
 let tentativas = 1;
 
